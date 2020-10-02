@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-    
-@endsection
+
+
 
 
 @section('css')
@@ -40,8 +40,8 @@
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->email }} </td>
                     <td> {{ $user->role }} </td>
-                    <td class="text-right"> 
-                        
+                    <td class="text-right">
+
                         <form method="post" action="{{ url('admin/users/' . $user->id ) }}">
                             <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-info"> View </a>
                             @csrf

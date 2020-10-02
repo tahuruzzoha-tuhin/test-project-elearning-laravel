@@ -52,7 +52,7 @@
         </ul>
 
         </nav>
-        <!-- End of Topbar -->    
+        <!-- End of Topbar -->
 @endsection
 
 
@@ -61,7 +61,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
         </div>
@@ -102,7 +102,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/courses') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span> Courses </span></a>
     </li>
@@ -120,7 +120,7 @@
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span> Lessons </span></a>
     </li>
-    
+
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -148,5 +148,5 @@
 
 </div>
 <!-- /.container-fluid -->
-    
+
 @endsection

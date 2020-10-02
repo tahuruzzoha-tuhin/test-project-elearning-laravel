@@ -17,7 +17,7 @@
                 <a class="nav-link manu-link" href="#"> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link manu-link" href="#"> Courses </a>
+                <a class="nav-link manu-link" href="/courses"> Courses </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link manu-link" href="#"> About </a>
@@ -62,13 +62,13 @@
                 </div>
             </li>
 
-        
 
-            
+
+
 
             @if(Auth::check())
                @include('includes.user-menu')
-            @else 
+            @else
 
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -83,10 +83,10 @@
 
         </ul>
 
-    </div>    
+    </div>
 
 </nav>
-<!-- End of Topbar -->    
+<!-- End of Topbar -->
 
 @endsection
 

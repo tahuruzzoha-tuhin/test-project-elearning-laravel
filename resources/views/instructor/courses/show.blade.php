@@ -16,7 +16,7 @@
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-       
+
         <tbody>
             <tr>
                 <td> Title </td>
@@ -33,7 +33,7 @@
             <tr>
                 <td> Image </td>
                 <td>
-                <img src="{{ asset($course->image) }}" width="200"> 
+                <img src="{{ asset($course->image) }}" width="200">
                 </td>
             </tr>
         </tbody>
@@ -52,13 +52,13 @@
         <ul class="list-group">
             <li class="list-group-item active"> {{ $section->title }} </li>
             @foreach ($section->lessons as $lesson)
-                <li class="list-group-item"> 
+                <li class="list-group-item">
                     <a href="{{ route('lesson-details', [$lesson->id, str_slug($lesson->title)] ) }}">
                         {{ $lesson->title }}  <br>
-                        By: <small> {{ $lesson->instructor->name }} </small> 
+                        By: <small> {{ $lesson->instructor }} </small> 
                     </a>
                 </li>
-            @endforeach  
+            @endforeach
         </ul>
     </div>
 @endforeach

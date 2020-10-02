@@ -10,7 +10,7 @@
 
 
 <a href="{{ url('users/courses/create') }}" class="btn btn-primary float-right"> Add course </a>
-<br><br>
+<br><br> 
 
 
 <!-- DataTales Example -->
@@ -35,8 +35,8 @@
                     <td> {{ $course->id }} </td>
                     <td> {{ $course->title }} </td>
                     <td> {{ $course->category->title }} </td>
-                    <td class="text-right"> 
-                        
+                    <td class="text-right">
+
                         <form method="post" action="{{ url('users/courses/' . $course->id ) }}">
                             <a href="{{ url('users/courses/' . $course->id) }}" class="btn btn-info"> View </a>
                             <a href="{{ url('users/courses/' . $course->id . '/edit') }}" class="btn btn-primary"> Edit </a>

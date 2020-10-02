@@ -8,7 +8,7 @@ use App\Course;
 
 class CoursesController extends Controller
 {
-    
+
     public function show( $id )
     {
         $this->data['course'] = Course::find( $id );
@@ -17,3 +17,4 @@ class CoursesController extends Controller
     }
 
 }
+ 

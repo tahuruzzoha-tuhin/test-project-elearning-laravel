@@ -14,7 +14,7 @@
 
 <a href="{{ url('admin/categories/create') }}" class="btn btn-primary float-right"> Add Category </a>
 <br><br>
-
+ 
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -36,8 +36,8 @@
                 <tr>
                     <td> {{ $category->id }} </td>
                     <td> {{ $category->title }} </td>
-                    <td class="text-right"> 
-                        
+                    <td class="text-right">
+
                         <form method="post" action="{{ url('admin/categories/' . $category->id ) }}">
                             <a href="{{ url('admin/categories/' . $category->id . '/edit') }}" class="btn btn-info"> Edit </a>
                             @csrf

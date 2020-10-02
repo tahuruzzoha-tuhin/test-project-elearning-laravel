@@ -7,11 +7,13 @@
 
 
 @section('content')
+<a href="{{ url('users/lessons/create') }}" class="btn btn-primary float-right"> Add New Lesson </a>
+<br><br>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary"> lessons </h6>
+    <h6 class="m-0 font-weight-bold text-primary"> Lessons </h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -30,14 +32,15 @@
                 <tr>
                     <td> {{ $lesson->id }} </td>
                     <td> {{ $lesson->title }} </td>
-                    <td> 
+                    <!-- <td>
                       <a href="{{ url('users/courses/' . $lesson->course->id) }}">
                         {{ $lesson->course->title }}
                       </a>
-                     </td>
+                     </td> -->
+                     <td>{{ $lesson->course->title }}</td>
                     <td> {{ $lesson->section->title }} </td>
-                    <td class="text-right"> 
-                        
+                    <td class="text-right">
+
                         <form method="post" action="{{ url('users/lessons/' . $lesson->id ) }}">
                             <a href="{{ url('users/lessons/' . $lesson->id) }}" class="btn btn-info"> View </a>
                             <a href="{{ url('users/lessons/' . $lesson->id . '/edit') }}" class="btn btn-primary"> Edit </a>

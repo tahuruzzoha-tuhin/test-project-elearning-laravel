@@ -47,7 +47,7 @@ class LessonsController extends Controller
      */
     public function store(Request $request)
     {
-        $formData = $request->all(); 
+        $formData = $request->all();
         $formData['instructor_id'] = Auth::id();
         Lesson::create($formData);
         flash('Lesson Created Successfully')->success();
@@ -79,7 +79,7 @@ class LessonsController extends Controller
         $this->data['title'] = 'Create New Lesson';
         $this->data['courses'] = Course::list();
         $this->data['lesson'] = Auth::user()->lessons()->findOrFail($id);
-        
+
         $this->data['sections'] = Section::list( $this->data['lesson']->course_id );
         $this->data['course'] = $this->data['lesson']->course;
 
@@ -97,7 +97,7 @@ class LessonsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $formData = $request->all(); 
+        $formData = $request->all();
         $lesson = Auth::user()->lessons()->findOrFail($id);
 
         $lesson->update($formData);
@@ -111,7 +111,7 @@ class LessonsController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function destroy($id)
     {
         $lesson = Auth::user()->lessons()->findOrFail($id);

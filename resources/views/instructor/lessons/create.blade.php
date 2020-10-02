@@ -15,7 +15,7 @@
                         {!! Form::model($lesson, array('url' => 'users/lessons/' . $lesson->id, 'method' => 'PUT', 'files'=>true)) !!}
                     @else
                         {!! Form::open(array('url' => 'users/lessons', 'method' => 'POST', 'files'=>true)) !!}
-                    @endif    
+                    @endif
                         <div class="form-group ">
                             <label for="course_id"> Course : </label>
                             {{ $course->title }}
@@ -25,7 +25,7 @@
                         <div class="form-group ">
                             <label for="section_id"> section : </label>
                             {!! Form::select('section_id', $sections, NULL, ['class' => 'form-control', 'placeholder' => '-- Select section --']) !!}
-                            @if($errors->has('section_id')) 
+                            @if($errors->has('section_id'))
                                 <small class="text-danger"> {{ $errors->first('section_id') }} </small>
                             @endif
                         </div>
@@ -33,7 +33,7 @@
                         <div class="form-group ">
                             <label for="title">Lesson Title : </label>
                             {!! Form::text('title', NULL, ['class' => 'form-control', 'placeholder' => 'Title']) !!}
-                            @if($errors->has('title')) 
+                            @if($errors->has('title'))
                                 <small class="text-danger"> {{ $errors->first('title') }} </small>
                             @endif
                         </div>
@@ -42,7 +42,7 @@
                         <div class="form-group ">
                             <label for="description">lesson Description : </label>
                             {!! Form::textarea('description', NULL, ['class' => 'form-control', 'id'=> 'editor', 'placeholder' => 'Description']) !!}
-                            @if($errors->has('description')) 
+                            @if($errors->has('description'))
                                 <small class="text-danger"> {{ $errors->first('description') }} </small>
                             @endif
                         </div>
@@ -51,7 +51,7 @@
                         <div class="form-group ">
                             <label for="video_url">Lesson video url : </label>
                             {!! Form::text('video_url', NULL, ['class' => 'form-control', 'placeholder' => 'Video url']) !!}
-                            @if($errors->has('video_url')) 
+                            @if($errors->has('video_url'))
                                 <small class="text-danger"> {{ $errors->first('video_url') }} </small>
                             @endif
                         </div>
@@ -60,19 +60,19 @@
                         <div class="form-group ">
                             <label for="source_code_url">Lesson source code url : </label>
                             {!! Form::text('source_code_url', NULL, ['class' => 'form-control', 'placeholder' => 'Source code url']) !!}
-                            @if($errors->has('source_code_url')) 
+                            @if($errors->has('source_code_url'))
                                 <small class="text-danger"> {{ $errors->first('source_code_url') }} </small>
                             @endif
                         </div>
 
 
-                       
-                        
-                
-                        <button type="submit" class="btn btn-primary float-right">Submit</button>
-                    
 
-                    {!! Form::close() !!}    
+
+
+                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+
+
+                    {!! Form::close() !!}
 
                 </div>
             </div>
@@ -83,7 +83,7 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.ckeditor.com/ckeditor5/12.1.0/classic/ckeditor.js"></script>    
+<script src="https://cdn.ckeditor.com/ckeditor5/12.1.0/classic/ckeditor.js"></script>
 <script>
     ClassicEditor
         .create( document.querySelector( '#editor' ) )
